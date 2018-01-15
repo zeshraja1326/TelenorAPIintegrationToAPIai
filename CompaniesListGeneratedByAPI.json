@@ -1,0 +1,258 @@
+{
+    "companies": [
+        {
+            "company_name": "AJK-BARKIYAT",
+            "service_provider": "electricity_barkiyatajk.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "Bahria Town Electric Supply Company",
+            "service_provider": "electricity_bahriatown.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "Barkiyat-Gilgit",
+            "service_provider": "electricity_barkiyatgilgit.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "FESCO",
+            "service_provider": "electricity_fesco.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "GEPCO",
+            "service_provider": "electricity_gepco.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "HESCO",
+            "service_provider": "electricity_hesco.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "IESCO",
+            "service_provider": "electricity_iesco.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "K-ELECTRIC",
+            "service_provider": "electricity_kelectric.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "KEL-HOOK",
+            "service_provider": "electricity_kelhook.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "LESCO",
+            "service_provider": "electricity_lesco.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "MEPCO",
+            "service_provider": "electricity_mepco.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "PESCO",
+            "service_provider": "electricity_pesco.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "QESCO",
+            "service_provider": "electricity_qesco.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "KEL new connection",
+            "service_provider": "electricity_kelnew.sp",
+            "sub_type": "Electricity",
+            "type": "Bill"
+        },
+        {
+            "company_name": "SNGPL",
+            "service_provider": "gas_sngpl.sp",
+            "sub_type": "Gas",
+            "type": "Bill"
+        },
+        {
+            "company_name": "SSGC",
+            "service_provider": "gas_ssgc.sp",
+            "sub_type": "Gas",
+            "type": "Bill"
+        },
+        {
+            "company_name": "Naya Tel",
+            "service_provider": "internet_nayatel.sp",
+            "sub_type": "Internet",
+            "type": "Bill"
+        },
+        {
+            "company_name": "PTCL EVO",
+            "service_provider": "internet_ptclevo.sp",
+            "sub_type": "Internet",
+            "type": "Bill"
+        },
+        {
+            "company_name": "Qubee",
+            "service_provider": "internet_qubee.sp",
+            "sub_type": "Internet",
+            "type": "Bill"
+        },
+        {
+            "company_name": "Wateen",
+            "service_provider": "internet_wateen.sp",
+            "sub_type": "Internet",
+            "type": "Bill"
+        },
+        {
+            "company_name": "wi-tribe",
+            "service_provider": "internet_witribe.sp",
+            "sub_type": "Internet",
+            "type": "Bill"
+        },
+        {
+            "company_name": "World Call",
+            "service_provider": "internet_worldcall.sp",
+            "sub_type": "Internet",
+            "type": "Bill"
+        },
+        {
+            "company_name": "Comsats Internet services",
+            "service_provider": "internet_comsatsis.sp",
+            "sub_type": "Internet",
+            "type": "Bill"
+        },
+        {
+            "company_name": "E-world",
+            "service_provider": "internet_eworld.sp",
+            "sub_type": "Internet",
+            "type": "Bill"
+        },
+        {
+            "company_name": "BrainNet",
+            "service_provider": "internet_brainnet.sp",
+            "sub_type": "Internet",
+            "type": "Bill"
+        },
+        {
+            "company_name": "Nexlinx",
+            "service_provider": "internet_nexlinx.sp",
+            "sub_type": "Internet",
+            "type": "Bill"
+        },
+        {
+            "company_name": "PTCL",
+            "service_provider": "telephone_ptcl.sp",
+            "sub_type": "Telephone",
+            "type": "Bill"
+        },
+        {
+            "company_name": "SCO",
+            "service_provider": "telephone_sco.sp",
+            "sub_type": "Telephone",
+            "type": "Bill"
+        },
+        {
+            "company_name": "SCO Prepaid load",
+            "service_provider": "telephone_scoprepaid.sp",
+            "sub_type": "Telephone",
+            "type": "Bill"
+        },
+        {
+            "company_name": "BrighterLite",
+            "service_provider": "solar_brighterlite.sp",
+            "sub_type": "Solar",
+            "type": "Bill"
+        },
+        {
+            "company_name": "FWASA",
+            "service_provider": "water_fwasa.sp",
+            "sub_type": "Water",
+            "type": "Bill"
+        },
+        {
+            "company_name": "HWASA",
+            "service_provider": "water_hwasa.sp",
+            "sub_type": "Water",
+            "type": "Bill"
+        },
+        {
+            "company_name": "KWSB",
+            "service_provider": "water_kwsb.sp",
+            "sub_type": "Water",
+            "type": "Bill"
+        },
+        {
+            "company_name": "LWASA",
+            "service_provider": "water_lwasa.sp",
+            "sub_type": "Water",
+            "type": "Bill"
+        },
+        {
+            "company_name": "Public Health Engineering Department (Water Department)",
+            "service_provider": "water_waterdepartment.sp",
+            "sub_type": "Water",
+            "type": "Bill"
+        },
+        {
+            "company_name": "QWASA",
+            "service_provider": "water_qwasa.sp",
+            "sub_type": "Water",
+            "type": "Bill"
+        },
+        {
+            "company_name": "RWASA",
+            "service_provider": "water_rwasa.sp",
+            "sub_type": "Water",
+            "type": "Bill"
+        },
+        {
+            "company_name": "MWASA",
+            "service_provider": "water_mwasa.sp",
+            "sub_type": "Water",
+            "type": "Bill"
+        },
+        {
+            "company_name": "GWASA",
+            "service_provider": "water_gwasa.sp",
+            "sub_type": "Water",
+            "type": "Bill"
+        },
+        {
+            "company_name": "Easypay",
+            "service_provider": "easypay.sp",
+            "sub_type": "Others",
+            "type": "Bill"
+        },
+        {
+            "company_name": "Eco Energy",
+            "service_provider": "solar_ecoenergy.sp",
+            "sub_type": "Solar",
+            "type": "Bill"
+        },
+        {
+            "company_name": "FBR",
+            "service_provider": "FBR_TAX.sp",
+            "sub_type": "Government Fees",
+            "type": "Bill"
+        }
+    ],
+    "description": "success",
+    "resultCode": "00"
+}
