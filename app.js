@@ -2,7 +2,7 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
-const port = 3000;
+const port = process.env.PORT||3000;
 const bodyParser = require('body-parser');
 
 const PayBill = require('./TelenorAPIs/TelenorBillPayments.js');
@@ -27,7 +27,7 @@ app.post('/webhook',function(req, res){
       console.log('Response:');
       var electricComp = parameters.ElectricityCompanyName.toString().toLowerCase();
       console.log(electricComp);
-      PayBill.billpayment(parameters.ConsumerId,electricComp,parameters.SenderMobileNumber,parameters.Amount);
+      //PayBill.billpayment(parameters.ConsumerId,electricComp,parameters.SenderMobileNumber,parameters.Amount);
       res.status(200).json({
                source: 'webhook',
                speech: "Consumer Reference with "+parameters.ConsumerId+" has paid "+parameters.Amount+" to "+parameters.ElectricityCompanyName,
@@ -38,7 +38,7 @@ app.post('/webhook',function(req, res){
     }
     else if (action == "MoneyTransferToMA") {
       console.log(result.parameters);
-      MoneyTransfer.EasyPaisaAccount(parameters.ReceiverName,parameters.ReceiverMobileNumber,parameters.Amount,parameters.SenderMobileNumber,parameters.SenderName);
+      //MoneyTransfer.EasyPaisaAccount(parameters.ReceiverName,parameters.ReceiverMobileNumber,parameters.Amount,parameters.SenderMobileNumber,parameters.SenderName);
       res.status(200).json({
         source: 'webhook',
         speech: parameters.SenderName+" you have send "+parameters.Amount+" from "+parameters.SenderMobileNumber.toString()+" to "+parameters.ReceiverName+ " on "+parameters.ReceiverMobileNumber.toString(),
@@ -47,7 +47,7 @@ app.post('/webhook',function(req, res){
     }
     else if (action == "SendMoneyToMA") {
       console.log(result.parameters);
-      MoneyTransfer.SendMoneyToMA(parameters.ReceiverMobileAccountNumber.toString(),parameters.Amount, parameters.SenderMobileNumber.toString(),parameters.SenderCNIC);
+      //MoneyTransfer.SendMoneyToMA(parameters.ReceiverMobileAccountNumber.toString(),parameters.Amount, parameters.SenderMobileNumber.toString(),parameters.SenderCNIC);
       res.status(200).json({
                source: 'webhook',
                speech: parameters.SenderMobileNumber+" with "+parameters.SenderCNIC+ " has sent "+parameters.Amount+" to "+parameters.ReceiverMobileAccountNumber,
@@ -58,7 +58,7 @@ app.post('/webhook',function(req, res){
       console.log(result.parameters);
       var bank_name = ChoseBankValue(parameters.Bank_Name);
       console.log(bank_name);
-      MoneyTransfer.MoneyTransferToBankAccount(parameters.ReceiverMobileNumber,parameters.AccountNo, parameters.RceiverName,parameters.Amount,parameters.SenderMobileNumber,parameters.SenderName, bank_name);
+      //MoneyTransfer.MoneyTransferToBankAccount(parameters.ReceiverMobileNumber,parameters.AccountNo, parameters.RceiverName,parameters.Amount,parameters.SenderMobileNumber,parameters.SenderName, bank_name);
       res.status(200).json({
                source: 'webhook',
                speech: parameters.SenderName+" You have send "+parameters.Amount+" to "+parameters.RceiverName.toString(),
