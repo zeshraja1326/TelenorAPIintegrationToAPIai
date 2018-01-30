@@ -2,7 +2,8 @@
 const request = require('request');
 // Headers for the QnA Maker Request
 
-module.exports.TelenorAPI = function(options) {
+module.exports.TelenorAPI =
+                        function(options) {
                                   return new Promise(function (resolve, reject) {
                                     request(options, function (error, res, body) {
                                       if (res != undefined)

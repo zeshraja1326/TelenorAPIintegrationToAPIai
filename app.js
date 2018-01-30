@@ -27,43 +27,25 @@ app.post('/webhook',function(req, res){
       console.log('Response:');
       var electricComp = parameters.ElectricityCompanyName.toString().toLowerCase();
       console.log(electricComp);
-      //PayBill.billpayment(parameters.ConsumerId,electricComp,parameters.SenderMobileNumber,parameters.Amount);
-      res.status(200).json({
-               source: 'webhook',
-               speech: "Consumer Reference with "+parameters.ConsumerId+" has paid "+parameters.Amount+" to "+parameters.ElectricityCompanyName,
-              displayText: "Consumer Reference with "+parameters.ConsumerId+" has paid "+parameters.Amount+" to "+parameters.ElectricityCompanyName
-            });
-
+      //PayBill.billpayment(res,parameters.ConsumerId,electricComp,parameters.SenderMobileNumber,parameters.Amount);
 
     }
     else if (action == "MoneyTransferToMA") {
       console.log(result.parameters);
-      //MoneyTransfer.EasyPaisaAccount(parameters.ReceiverName,parameters.ReceiverMobileNumber,parameters.Amount,parameters.SenderMobileNumber,parameters.SenderName);
-      res.status(200).json({
-        source: 'webhook',
-        speech: parameters.SenderName+" you have send "+parameters.Amount+" from "+parameters.SenderMobileNumber.toString()+" to "+parameters.ReceiverName+ " on "+parameters.ReceiverMobileNumber.toString(),
-       displayText:parameters.SenderName+" you have send "+parameters.Amount+" from "+parameters.SenderMobileNumber.toString()+" to "+parameters.ReceiverName+ " on "+parameters.ReceiverMobileNumber.toString()
-      });
+      //MoneyTransfer.EasyPaisaAccount(res,parameters.ReceiverName,parameters.ReceiverMobileNumber,parameters.Amount,parameters.SenderMobileNumber,parameters.SenderName);
+
     }
     else if (action == "SendMoneyToMA") {
       console.log(result.parameters);
-      //MoneyTransfer.SendMoneyToMA(parameters.ReceiverMobileAccountNumber.toString(),parameters.Amount, parameters.SenderMobileNumber.toString(),parameters.SenderCNIC);
-      res.status(200).json({
-               source: 'webhook',
-               speech: parameters.SenderMobileNumber+" with "+parameters.SenderCNIC+ " has sent "+parameters.Amount+" to "+parameters.ReceiverMobileAccountNumber,
-              displayText: parameters.SenderMobileNumber+" with "+parameters.SenderCNIC+ " has sent "+parameters.Amount+" to "+parameters.ReceiverMobileAccountNumber
-            });
+      //MoneyTransfer.SendMoneyToMA(res,parameters.ReceiverMobileAccountNumber.toString(),parameters.Amount, parameters.SenderMobileNumber.toString(),parameters.SenderCNIC);
+
     }
     else if (action == "MoneyTransferToBank") {
       console.log(result.parameters);
       var bank_name = ChoseBankValue(parameters.Bank_Name);
       console.log(bank_name);
-      //MoneyTransfer.MoneyTransferToBankAccount(parameters.ReceiverMobileNumber,parameters.AccountNo, parameters.RceiverName,parameters.Amount,parameters.SenderMobileNumber,parameters.SenderName, bank_name);
-      res.status(200).json({
-               source: 'webhook',
-               speech: parameters.SenderName+" You have send "+parameters.Amount+" to "+parameters.RceiverName.toString(),
-              displayText: parameters.SenderName+" You have send "+parameters.Amount+" to "+parameters.RceiverName.toString()
-            });
+      //MoneyTransfer.MoneyTransferToBankAccount(res,parameters.ReceiverMobileNumber,parameters.AccountNo, parameters.RceiverName,parameters.Amount,parameters.SenderMobileNumber,parameters.SenderName, bank_name);
+  
     }
 
     else if(action == "loginAction")  {
