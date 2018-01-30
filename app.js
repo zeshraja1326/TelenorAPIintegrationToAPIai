@@ -66,9 +66,9 @@ app.post('/webhook',function(req, res){
             });
     }
 
-    else  {
+    else if(action == "loginAction")  {
       console.log("No Action");
-      console.log(result.parameters);
+      MoneyTransfer.TestReturnResponse(res,parameters)
       // res.status(200).json({
       //          source: 'webhook',
       //          speech: "Yor Are Done with transaction",

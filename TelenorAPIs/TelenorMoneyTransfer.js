@@ -1,8 +1,18 @@
 const config = require('./Config');
 const CallAPI = require('./TelenorAPICall');
 
+// Testing to return the Response to the webhook through the function called
+module.exports.TestReturnResponse = function(res, parameters) {
+                                        console.log(parameters);
+                                        res.status(200).json({
+                                                 source: 'webhook',
+                                                 speech: "Testing the Response Completed",
+                                                displayText: "Testing the Response"
+                                              });
+};
+// Testing Ends Here
 module.exports.EasyPaisaAccount =
-                              async function( ReceiverNumber,ReceiverName,AmountToTransfer, SenderNumber, SenderName)
+                              async function(ReceiverNumber,ReceiverName,AmountToTransfer, SenderNumber, SenderName)
                               {
                                     var headers =
                                                   {
