@@ -1,4 +1,4 @@
-const config = require('./Config');
+const config = require('./Config').configs;
 const CallAPI = require('./TelenorAPICall');
 
 module.exports.billpayment =
@@ -31,7 +31,7 @@ module.exports.billpayment =
                                               },
                                               {
                                                 "paymentReferenceType": "billcompany",
-                                                "paymentReferenceValue": "electricity_"+BillCompany+".sp"
+                                                "paymentReferenceValue": "electricity_"+BillCompany.toString()+".sp"
                                               }
                                             ]
                                           };
@@ -46,8 +46,8 @@ module.exports.billpayment =
                                console.log(transactionResult);
                                response.status(200).json({
                                         source: 'webhook',
-                                        speech: "Consumer Reference with "+ConsumerID+" has paid "+Amount+" to "+BillCompany,
-                                       displayText: "Consumer Reference with "+ConsumerID+" has paid "+Amount+" to "+BillCompany
+                                        speech: "Consumer Reference with "+ConsumerID.toString()+" has paid "+Amount.toString()+" to "+BillCompany.toString(),
+                                       displayText: "Consumer Reference with "+ConsumerID.toString()+" has paid "+Amount.toString()+" to "+BillCompany.toString()
                                      });
 
 

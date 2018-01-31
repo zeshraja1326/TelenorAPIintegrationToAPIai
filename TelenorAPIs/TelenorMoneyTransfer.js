@@ -1,5 +1,6 @@
-const config = require('./Config');
+const config = require('./Config').configs;
 const CallAPI = require('./TelenorAPICall');
+
 
 // Testing to return the Response to the webhook through the function called
 module.exports.TestReturnResponse =

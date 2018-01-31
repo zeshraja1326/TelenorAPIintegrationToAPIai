@@ -1,9 +1,15 @@
 //  Setting up the server with express
 const express = require('express');
-const fs = require('fs');
 const app = express();
 const port = process.env.PORT||3000;
 const bodyParser = require('body-parser');
+
+// Configuration of the Access Token Generated from TelenorAPI
+const ConfigAccessToken = require('./TelenorAPIs/Config.js');
+// Generate Token for the first time
+ConfigAccessToken.GenerateAccessToken();
+// Refresh the token after expiration
+ConfigAccessToken.RefreshAccessToken();
 
 const PayBill = require('./TelenorAPIs/TelenorBillPayments.js');
 const MoneyTransfer = require('./TelenorAPIs/TelenorMoneyTransfer.js');
@@ -27,25 +33,25 @@ app.post('/webhook',function(req, res){
       console.log('Response:');
       var electricComp = parameters.ElectricityCompanyName.toString().toLowerCase();
       console.log(electricComp);
-      //PayBill.billpayment(res,parameters.ConsumerId,electricComp,parameters.SenderMobileNumber,parameters.Amount);
+      PayBill.billpayment(res,parameters.ConsumerId,electricComp,parameters.SenderMobileNumber,parameters.Amount);
 
     }
     else if (action == "MoneyTransferToMA") {
       console.log(result.parameters);
-      //MoneyTransfer.EasyPaisaAccount(res,parameters.ReceiverName,parameters.ReceiverMobileNumber,parameters.Amount,parameters.SenderMobileNumber,parameters.SenderName);
+      MoneyTransfer.EasyPaisaAccount(res,parameters.ReceiverName,parameters.ReceiverMobileNumber,parameters.Amount,parameters.SenderMobileNumber,parameters.SenderName);
 
     }
     else if (action == "SendMoneyToMA") {
       console.log(result.parameters);
-      //MoneyTransfer.SendMoneyToMA(res,parameters.ReceiverMobileAccountNumber.toString(),parameters.Amount, parameters.SenderMobileNumber.toString(),parameters.SenderCNIC);
+      MoneyTransfer.SendMoneyToMA(res,parameters.ReceiverMobileAccountNumber.toString(),parameters.Amount, parameters.SenderMobileNumber.toString(),parameters.SenderCNIC);
 
     }
     else if (action == "MoneyTransferToBank") {
       console.log(result.parameters);
       var bank_name = ChoseBankValue(parameters.Bank_Name);
       console.log(bank_name);
-      //MoneyTransfer.MoneyTransferToBankAccount(res,parameters.ReceiverMobileNumber,parameters.AccountNo, parameters.RceiverName,parameters.Amount,parameters.SenderMobileNumber,parameters.SenderName, bank_name);
-  
+      MoneyTransfer.MoneyTransferToBankAccount(res,parameters.ReceiverMobileNumber,parameters.AccountNo, parameters.RceiverName,parameters.Amount,parameters.SenderMobileNumber,parameters.SenderName, bank_name);
+
     }
 
     else if(action == "loginAction")  {
@@ -56,6 +62,10 @@ app.post('/webhook',function(req, res){
       //          speech: "Yor Are Done with transaction",
       //         displayText: "Yor Are Done with transaction"
       //       });
+    }
+    else {
+      console.log('Testing the Access Token');
+      console.log(ConfigAccessToken.AUTHORIZATION);
     }
 
 });

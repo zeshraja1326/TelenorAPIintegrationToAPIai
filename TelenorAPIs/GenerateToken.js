@@ -3,36 +3,15 @@ const request = require('request');
 // Headers for the QnA Maker Request
 
 const headers = {
-                  "Authorization": "Bearer mLlOWi5vjBpAEAM7h14LwiQSrA7h",
-                  "X-API-Key": "TelenorAPIGW",
-                  "X-Channel": "apollo",
-                  "X-User-Credential-1":"MjgwNkA5MjM0NTg1NTk1NjE6NTQzMjE=",
-                  "Content-Type":"application/json"
+                  "Authorization": "Basic ZWZqV1d2SzFsbDlsMmxIZUxjQkRmTFdtN1BJZFF5Tk46MDQ4VUFYdXZhZnlRUWs4dQ=="
                 };
-// Doing Request to Microsoft QnA Maker
-var data = {
-              "currency": "PKR",
-              "paidAmount": "111111.00",
-              "supplementaryBillReferenceDetails": [
-                {
-                  "paymentReferenceType": "consumerno",
-                  "paymentReferenceValue": "0113134"
-                },
-                {
-                  "paymentReferenceType": "billcompany",
-                  "paymentReferenceValue": "electricity_fesco.sp"
-                }
-              ]
-            };
-
 var options = {
-                  url: 'https://api.telenor.com.pk/v0/mm/accounts/msisdn@03089299756/bills/0/payments',
+                  url: 'https://api.telenor.com.pk/oauthtoken/v1/generate?grant_type=client_credentials',
                   method: 'POST',
-                  headers: headers,
-                  body: JSON.stringify(data)
+                  headers: headers
                };
 
-function TelenorAPICall(options) {
+module.exports.TelenorAPI =  function TelenorAPICall() {
                                   return new Promise(function (resolve, reject) {
                                     request(options, function (error, res, body) {
                                       if (res != undefined)
@@ -58,9 +37,9 @@ function TelenorAPICall(options) {
                                     });
                                   });
                                 }
-// End of Request to QnA Module
 
-(async function(){
-  var result = await TelenorAPICall(options);
-  console.log(result);
-})();
+
+// (async function(){
+//   var result = await TelenorAPICall();
+//   console.log(result);
+// });
