@@ -1,0 +1,184 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns2:getbanklistResponse xmlns:ns2="http://wrapper.api.subscriber.saanga.com/">
+         <return>
+            <bank>
+               <account_number_format>14 Digit (BBBB AAAAAAAA TT)</account_number_format>
+               <bank_name>Habib Bank Limited Pakistan</bank_name>
+               <service_provider>HBL</service_provider>
+               <short_name>bankaccount_hbl.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>11 Digit &amp; 16 Digit</account_number_format>
+               <bank_name>Standard Chartered Bank</bank_name>
+               <service_provider>SCB</service_provider>
+               <short_name>bankaccount_scb.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>11 Digit (BBBB TTT AAAA), 16 Digit (BBBB BBBB TTT AAAA X) &amp; 14 Digit (BBBB AAAAAAAAAA)</account_number_format>
+               <bank_name>United Bank Limited</bank_name>
+               <service_provider>UBL</service_provider>
+               <short_name>bankaccount_ubl.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>13 (BBBBAAAAAAAAA) &amp; 20 Digit (BBBBAAAAAAAAAAAAAAAA)</account_number_format>
+               <bank_name>Allied Bank Limited</bank_name>
+               <service_provider>ABL</service_provider>
+               <short_name>bankaccount_abl.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>14 Digit (BBBB AAAAAAAAAA), 12 Digit (BBBB AAAAAAAA) &amp; 18 Digit (BBBB AAAAAAAAAAAAAA)</account_number_format>
+               <bank_name>Bank AlFalah Limited</bank_name>
+               <service_provider>BAF</service_provider>
+               <short_name>bankaccount_baf.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>AccountNumberFormat.BAH</account_number_format>
+               <bank_name>Bank AlHabib Limited</bank_name>
+               <service_provider>BAH</service_provider>
+               <short_name>bankaccount_bah.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>AccountNumberFormat.MCB</account_number_format>
+               <bank_name>Muslim Commercial Bank</bank_name>
+               <service_provider>MCB</service_provider>
+               <short_name>bankaccount_mcb.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>AccountNumberFormat.FBL</account_number_format>
+               <bank_name>Faysal Bank Limited</bank_name>
+               <service_provider>FBL</service_provider>
+               <short_name>bankaccount_fbl.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>13 Digit (BBBB CC TTT AAAA)</account_number_format>
+               <bank_name>Askari Commercial Bank Limited</bank_name>
+               <service_provider>ACBL</service_provider>
+               <short_name>bankaccount_acbl.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>AccountNumberFormat.NIB</account_number_format>
+               <bank_name>NIBBank</bank_name>
+               <service_provider>NIB</service_provider>
+               <short_name>bankaccount_nib.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>14 Digit</account_number_format>
+               <bank_name>SilkBank</bank_name>
+               <service_provider>SILK</service_provider>
+               <short_name>bankaccount_silk.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>15 Digit (BBBB AAAAAAAAAAA )</account_number_format>
+               <bank_name>Soneri Bank Limited</bank_name>
+               <service_provider>SBL</service_provider>
+               <short_name>bankaccount_sbl.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>10 Digit</account_number_format>
+               <bank_name>Dubai Islamic Bank</bank_name>
+               <service_provider>DIB</service_provider>
+               <short_name>bankaccount_dib.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>20 Digit</account_number_format>
+               <bank_name>Summit Bank</bank_name>
+               <service_provider>SUM</service_provider>
+               <short_name>bankaccount_sum.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>14 Digit</account_number_format>
+               <bank_name>Meezan Bank</bank_name>
+               <service_provider>MEZ</service_provider>
+               <short_name>bankaccount_mez.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>16 Digit (BBBB AAAAAAAAAAAA)</account_number_format>
+               <bank_name>Apna Microfinance Bank</bank_name>
+               <service_provider>APNA</service_provider>
+               <short_name>bankaccount_apna.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>13 Digit</account_number_format>
+               <bank_name>AlBaraka Islamic Bank Limited</bank_name>
+               <service_provider>BAB</service_provider>
+               <short_name>bankaccount_bab.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>16 Digit (BBBB TT CCC LLLLLL X)</account_number_format>
+               <bank_name>Burj Bank Limited</bank_name>
+               <service_provider>BBL</service_provider>
+               <short_name>bankaccount_bbl.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>15 Digit</account_number_format>
+               <bank_name>Bank Islami Pakistan Limited</bank_name>
+               <service_provider>BIPL</service_provider>
+               <short_name>bankaccount_bipl.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>17 Digit (BBBB TTT AAAAAAAAAA)</account_number_format>
+               <bank_name>Bank Of Punjab</bank_name>
+               <service_provider>BOP</service_provider>
+               <short_name>bankaccount_bop.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>10 Digit</account_number_format>
+               <bank_name>Citi Bank</bank_name>
+               <service_provider>CITI</service_provider>
+               <short_name>bankaccount_citi.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>19 Digit (C ZZ BB SSSSS CCC AAAAAA)</account_number_format>
+               <bank_name>Habib Metropolitan Bank</bank_name>
+               <service_provider>HMB</service_provider>
+               <short_name>bankaccount_hmb.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>6 Digit</account_number_format>
+               <bank_name>JS Bank</bank_name>
+               <service_provider>JSB</service_provider>
+               <short_name>bankaccount_jsb.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>13 Digit (BBBB AAAAAA SSS)</account_number_format>
+               <bank_name>KASB Bank</bank_name>
+               <service_provider>KASB</service_provider>
+               <short_name>bankaccount_kasb.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>10 Digit</account_number_format>
+               <bank_name>Samba Bank</bank_name>
+               <service_provider>SAMBA</service_provider>
+               <short_name>bankaccount_samba.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>15 Digit (BBBB RRRRRR AAAA)</account_number_format>
+               <bank_name>Sindh Bank</bank_name>
+               <service_provider>SINDHBANK</service_provider>
+               <short_name>bankaccount_sindhbank.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>11 Digit Upaisa Account, 15 Digit Branch Account</account_number_format>
+               <bank_name>UBank</bank_name>
+               <service_provider>UBANK</service_provider>
+               <short_name>bankaccount_ubank.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>Waseela Bank Account Number 9 Digit, Mobicash Mobile Account 11 Digit</account_number_format>
+               <bank_name>Waseela</bank_name>
+               <service_provider>WASEELA</service_provider>
+               <short_name>bankaccount_waseela.sp</short_name>
+            </bank>
+            <bank>
+               <account_number_format>12 Digit</account_number_format>
+               <bank_name>FINCA Bank</bank_name>
+               <service_provider>FINCA</service_provider>
+               <short_name>bankaccount_finca.sp</short_name>
+            </bank>
+            <description>success</description>
+            <resultCode>00</resultCode>
+         </return>
+      </ns2:getbanklistResponse>
+   </soap:Body>
+</soap:Envelope>
